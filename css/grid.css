@@ -42,10 +42,7 @@ body {
 }
 header{
 	text-align:center;
-	position: fixed;
-  	top: 0;
-  	left: 0;
-  	z-index: 999;
+
   	width: 100%;
   	background-color: #fff;
 
@@ -92,6 +89,19 @@ hr.small { margin: 1.5rem auto; }
   	margin-top: 12%;
 }
 .column { margin-bottom: 1.5rem; }
+
+.topNav{
+	position: fixed;
+  	top: 0;
+  	left: 0;
+  	z-index: 999;
+}
+.unfixed{
+	position: absolute;
+  	top: 450px;
+  	left: 0;
+  	z-index: 999;
+}
 
 /* Clearfix by Nicolas Gallagher
 -------------------------------------------------------------- */

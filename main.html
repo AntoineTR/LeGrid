@@ -16,12 +16,27 @@
     <!--[if lt IE 9]>
       <script src="/js/html5shiv.js"></script>
     <![endif]-->
+	<script>
+	 function DisplayInfo () {
+	 	var div = document.getElementById ("body");
+	 		if(div.scrollTop > 450 ){
+	 			document.getElementById("NavBar").className = "unfixed";
+	 		}
+	 		else if(div.scrollTop > 650){
+	 			document.getElementById("NavBar").
+	 		}
+	 		else{
+	 			document.getElementById("NavBar").className = "topNav shadow";
+	 		}
 
+
+	 	}
+	</script>
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   </head>
-<body>
-	<header class="shadow">
+<body onscroll="DisplayInfo()" id="body">
+	<header class="unfixed shadow" id="NavBar">
 		<div class="container">
 			<div class="intro">
 				<h1>My First Heading</h1>
@@ -30,9 +45,9 @@
 			</div>
 		</div>
 	</header>
-	<div class="topHeader"></div>
+	<div class="topHeader" id="topHeader"></div>
 	<section>
-      <div class="container">
+      <div class="container" id="test">
         <h1>Why bother with responsive?</h1>
         <p>Because much trouble and sadness. and because we don't.</p>
       </div>
