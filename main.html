@@ -17,50 +17,33 @@
       <script src="/js/html5shiv.js"></script>
     <![endif]-->
 	<script>
-    function DisplayImg(){
-        var img = document.getElementById ("topHeader");
-        var imgCity = document.getElementById("cityBackground");
-        img.style.height = window.innerHeight + 'px';
-        imgCity.style.height = window.innerHeight + 'px';
-    };
-
-	function DisplayInfo () {
+	 function DisplayInfo () {
 	 	var div = document.getElementById ("body");
-        var s1 = document.getElementById ("SectionUn");
-        var header = document.getElementById("NavBar");
-        var top = s1.offsetTop - header.offsetHeight;
-	 		if(div.scrollTop >  top ){
-	 			header.className = "unfixed";
-                header.style.top = top + 'px';
+	 		if(div.scrollTop > 450 ){
+	 			document.getElementById("NavBar").className = "unfixed";
 	 		}
 	 		else{
-	 			header.className = "topNav";
-                header.style.top = '0px';
+	 			document.getElementById("NavBar").className = "topNav shadow";
 	 		}
 
-        var cityDiv = document.getElementById("cityBackgroundText")
-            if(div.scrollTop > 200){
-                cityDiv.style.left = 200 + 'px';
-            }
-            else{
-                cityDiv.style.left = 900 + 'px';
 
-            }
-	}
+	 	}
 	</script>
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   </head>
-<body onscroll="DisplayInfo()" onload="DisplayImg()" id="body">
-	<header class="topNav" id="NavBar">
+<body onscroll="DisplayInfo()" id="body">
+	<header class="unfixed shadow" id="NavBar">
 		<div class="container">
 			<div class="intro">
 				<h1>My First Heading</h1>
+
+				<p>My first paragraph.</p>
 			</div>
 		</div>
 	</header>
 	<div class="topHeader" id="topHeader"></div>
-	<section id="SectionUn">
+	<section>
       <div class="container" id="test">
         <h1>Why bother with responsive?</h1>
         <p>Because much trouble and sadness. and because we don't.</p>
@@ -68,7 +51,6 @@
     </section>
 </hr>
     <section>
-
 		<div class="row clearfix">
     	<div class="container">
 			<div class="column half">
@@ -82,16 +64,12 @@
 		</hr>
 
     </section>
-
-    <div class="city" id="cityBackground">
     <section>
-        <div class="leCercle"></div>
-    	<div class="container-small" id="cityBackgroundText">
-    		<h1>Pure, Pure, JS. <br/><small>Dyeah, Css.</small></h1>
-    	</div>
+    	<div class="container">
+    		<div class="container">
+		    <h1>Indeed.</h1>
+		</div>
     </section>
-    </div>
-
 
 </body>
 </html>
