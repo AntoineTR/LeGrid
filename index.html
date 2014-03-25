@@ -21,13 +21,16 @@
     function DisplayImg(){
         var img = document.getElementById ("topHeader");
         var imgCity = document.getElementById("cityBackground");
+        var sect1 = document.getElementById("section1");
         img.style.height = window.innerHeight + 'px';
         imgCity.style.height = window.innerHeight + 'px';
+        sect1.style.height = window.innerHeight + 'px';
+        img.style.width = window.innerWidth + 'px';
     };
 
 	function DisplayInfo () {
 	 	var div = document.getElementById ("body");
-        var s1 = document.getElementById ("SectionUn");
+        var s1 = document.getElementById ("Section2");
         var header = document.getElementById("NavBar");
         var top = s1.offsetTop - header.offsetHeight;
 	 		if(div.scrollTop >  top ){
@@ -44,15 +47,22 @@
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
   </head>
 <body onscroll="DisplayInfo()" onload="DisplayImg()" id="body">
-	<div class="topHeader" id="topHeader"></div>
-	<section id="SectionUn">
+	<section id="section1">
+		<div class="container">
+			<div class="intro">
+				<h1>My First Heading</h1>
+			</div>
+		</div>
+	</section>
+	<div class="topNav topHeader" id="topHeader"></div>
+	<section id="Section2" class="TextSection">
       <div class="container" id="test">
         <h1>Why bother with responsive?</h1>
         <p>Because much trouble and sadness. and because we don't.</p>
       </div>
     </section>
 </hr>
-    <section>
+    <section class="TextSection">
 
 		<div class="row clearfix">
     	<div class="container">

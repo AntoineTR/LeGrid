@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 html {
   font: 100%/1.5 "Open Sans", sans-serif;
   font-weight: 400;
@@ -39,6 +40,7 @@ body {
   background-color: #fff;
   color: #555;
   margin:0px;
+
 }
 header{
 	text-align:center;
@@ -104,7 +106,7 @@ hr.small { margin: 1.5rem auto; }
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+  z-index: -1;
   background-color:rgba(255,255,255,0.4);
 }
 .unfixed{
@@ -133,8 +135,13 @@ hr.small { margin: 1.5rem auto; }
   left: 170px;
 
 }
-#SectionUn{
+.TextSection{
+
+  background-color: #fff;
+}
+#Section2{
   height: 150%;
+
 }
 /* Clearfix by Nicolas Gallagher
 -------------------------------------------------------------- */
