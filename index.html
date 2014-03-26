@@ -29,18 +29,19 @@
     };
 
 	function DisplayInfo () {
-	 	var div = document.getElementById ("body");
-        var s1 = document.getElementById ("Section2");
-        var header = document.getElementById("NavBar");
-        var top = s1.offsetTop - header.offsetHeight;
-	 		if(div.scrollTop >  top ){
-	 			header.className = "unfixed";
-                header.style.top = top + 'px';
-	 		}
-	 		else{
-	 			header.className = "topNav";
-                header.style.top = '0px';
-	 		}
+
+        var div = document.getElementById ("body");
+        var imgCity = document.getElementById ("cityBackground");
+        var imgCityText = document.getElementById("cityBackgroundText");
+        var s2 = document.getElementById("Section2");
+        var st = document.getElementById("TextSection");
+        var TextSectionTotal = s2.offsetHeight + st.offsetHeight;
+        var top = imgCity.offsetTop;
+        if(div.scrollTop > s2.offsetTop ){
+            imgCityText.style.left = (((1-( div.scrollTop - s2.offsetTop )/ TextSectionTotal) * 80) + 10) + '%';
+            console.log()
+        }
+
 	}
 	</script>
     <!-- Google Fonts -->
@@ -62,7 +63,7 @@
       </div>
     </section>
 </hr>
-    <section class="TextSection">
+    <section class="TextSection" id="TextSection">
 
 		<div class="row clearfix">
     	<div class="container">

@@ -78,7 +78,7 @@ hr.small { margin: 1.5rem auto; }
   width: 90%;
   text-align: left;
   position: absolute;
-  left:80%;
+  left: 90%;
   padding-top: 10px;
 }
 /*.topimg{
@@ -132,8 +132,7 @@ hr.small { margin: 1.5rem auto; }
   width:200px;
   height:200px;
   position: absolute;
-  left: 170px;
-
+  left: 10%;
 }
 .TextSection{
 
@@ -142,6 +141,9 @@ hr.small { margin: 1.5rem auto; }
 #Section2{
   height: 150%;
 
+}
+#cityBackgroundText{
+  margin-left: 2%;
 }
 /* Clearfix by Nicolas Gallagher
 -------------------------------------------------------------- */
